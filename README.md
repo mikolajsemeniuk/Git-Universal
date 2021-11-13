@@ -1,5 +1,17 @@
 # Git-Universal
-All most common git command lines
+All most common git command lines.
+
+## Adding Git credentials
+[Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+```sh
+ssh-keygen -t ed25519 -C "m.semeniuk@icloud.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+[Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+```sh
+clip < ~/.ssh/id_ed25519.pub
+```
 
 ## Git Config
 ```sh
