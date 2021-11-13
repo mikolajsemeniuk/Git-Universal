@@ -91,3 +91,11 @@ git branch -m {oldname} {newname} # rename branch
 git branch -m {newname} # current branch
 git branch -M {newname} # on windows
 ```
+## Push/Pull
+```sh
+git push -u origin main
+git push
+
+git pull origin main
+git pull
+```
