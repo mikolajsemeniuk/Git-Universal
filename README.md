@@ -12,6 +12,8 @@ git config -l
 ```sh
 # initialize a repository
 git init .
+# add origin
+git remote add origin git@github.com:mikolajsemeniuk/git-universal.git
 # remove a repository
 rm -rf .git
 ```
