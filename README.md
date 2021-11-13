@@ -75,6 +75,8 @@ git add {file} # update changes to already commited file
 git restore {file} # rollback changes made to already commited file
 
 git commit --amend -m "new name for last created commit"
+
+git reset --hard HEAD~1 # remove local commit
 ```
 ## Branches
 ```
