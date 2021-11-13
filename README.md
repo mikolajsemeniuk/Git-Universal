@@ -63,3 +63,18 @@ git restore {file} # rollback changes made to already commited file
 
 git commit --amend -m "new name for last created commit"
 ```
+## Branches
+```
+git branch # show all local branches
+git branch {name_of_branch_we_want_to_create}
+git checkout -b {name_of_branch_we_want_to_create_and_switch} # all commits will be attached to this branch
+
+git branch -d {name_of_branch_we_want_to_delete} # soft delete
+git branch -D {name_of_branch_we_want_to_delete} # force delete
+
+git checkout {branch_name_we_want_to_switch_to} # all commits will be attached to this branch
+
+git branch -m {oldname} {newname} # rename branch
+git branch -m {newname} # current branch
+git branch -M {newname} # on windows
+```
