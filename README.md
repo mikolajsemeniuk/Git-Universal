@@ -81,6 +81,7 @@ git reset --hard HEAD~1 # remove local commit
 ```
 ## Branches
 ```
+### YOU HAVE TO HAVE AT LEAST ONE COMMIT TO CREATE, RENAME, LIST OR DELETE BRANCHES
 git branch # show all local branches
 git branch -r # show all remote branches
 git branch -a # show all remote and local branches
