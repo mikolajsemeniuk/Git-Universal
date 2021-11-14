@@ -63,6 +63,7 @@ git restore . # restore all changes
 ## Commits
 ```sh
 git log
+git log --oneline
 git log --branches --not --remotes # show all commits in commit history/commit area
 git log --branches --not --remotes --simplify-by-decoration --decorate --oneline # the same but simplify
 git show {commit_id} # show info about commit
@@ -81,6 +82,9 @@ git reset --hard HEAD~1 # remove local commit
 ## Branches
 ```
 git branch # show all local branches
+git branch -r # show all remote branches
+git branch -a # show all remote and local branches
+
 git branch {name_of_branch_we_want_to_create}
 git checkout -b {name_of_branch_we_want_to_create_and_switch} # all commits will be attached to this branch
 
@@ -92,12 +96,37 @@ git checkout {branch_name_we_want_to_switch_to} # all commits will be attached t
 git branch -m {oldname} {newname} # rename branch
 git branch -m {newname} # current branch
 git branch -M {newname} # on windows
+
+# be on main branch
+git merge feature-A
 ```
 ## Push/Pull
 ```sh
-git push -u origin main
+git push -u origin main # or
+git push --set-upstream origin main
+git push --set-upstream origin feature-A
+
 git push
 
 git pull origin main
 git pull
+
+# be on your feature branch
+git pull -r origin main
+git pull --rebase origin main
+
+# resolving merge conflicts on the same branch
+git pull
+git add .
+git commit -m "some commit"
+git push
+
+# resolve merge conflicts on the main and different branch
+# be on your feature branch
+git pull -r origin main
+git add .
+git rebase --continue
+# `esc`+:wq
+# do this until all merge conflicts are resolved in all commits 
+git push -f
 ```
