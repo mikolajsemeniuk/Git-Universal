@@ -99,5 +99,4 @@ git push -u origin main
 git push
 
 git pull origin main
-git pull
 ```
