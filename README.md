@@ -55,6 +55,11 @@ git rm --cached index.js index.css # multiple
 git rm -f index.css # single
 git rm -r -f . # all
 
+# show difference between staged and ustaged changes
+git diff 
+# restore unstaged not commited changes
+git clean -df
+
 # restore changes made to files
 git restore {file} # single file
 git restore . # restore all changes
@@ -77,7 +82,8 @@ git restore {file} # rollback changes made to already commited file
 
 git commit --amend -m "new name for last created commit"
 
-git reset --hard HEAD~1 # remove local commit
+git reset --soft "HEAD^" # remove last commit and rollback the changes without removing file
+git reset --hard HEAD~1 # remove local commit and file as well
 ```
 ## Branches
 ```
@@ -127,7 +133,11 @@ git push
 git pull -r origin main
 git add .
 git rebase --continue
-# `esc`+:wq
+# `esc`+:wq or save and close file in vscode
 # do this until all merge conflicts are resolved in all commits 
 git push -f
+git checkout main
+git branch -d {your branch name} # or
+
+git push --delete origin old_branch
 ```
