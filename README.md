@@ -26,7 +26,7 @@ git config -l
 # initialize a repository
 git init .
 # add origin
-git remote add origin git@github.com:mikolajsemeniuk/git-universal.git
+git remote add origin git@github.com:mikolajsemeniuk/git-training.git
 # remove a repository
 rm -rf .git
 ```
@@ -58,7 +58,7 @@ git rm -r -f . # all
 # show difference between staged and ustaged changes
 git diff 
 # restore unstaged not commited changes
-git clean -df
+git checkout -- .
 
 # restore changes made to files
 git restore {file} # single file
@@ -139,5 +139,26 @@ git push -f
 git checkout main
 git branch -d {your branch name} # or
 
+# delete remote branch
 git push --delete origin old_branch
+```
+## Flow
+```sh
+git init .
+git remote add origin git@github.com:mikolajsemeniuk/git-training.git
+git pull origin main
+
+git pull origin main
+git checkout -b feature-A
+git push -u origin feature-A
+
+# ...
+git add .
+git commit -n -m "n commit"
+# ...
+
+git push
+
+git pull -r origin main
+git add .
 ```
